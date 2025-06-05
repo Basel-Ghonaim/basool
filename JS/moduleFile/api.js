@@ -2,6 +2,7 @@ import { readFileAsBase64 } from "./utils.js"
 
 // Base Url 
 const baseUrl = "https://tarmeezacademy.com/api/v1"
+
 // login Request
 export async function loginRequest() {
   let userName = document.getElementById("email-login").value
@@ -22,6 +23,7 @@ export async function loginRequest() {
       return false;
   }
 }
+
 // Register Request
 export async function registerRequest() {
   let name = document.getElementById("name-register").value;
@@ -58,6 +60,7 @@ export async function registerRequest() {
     }
   }
 }
+
 // Get Post Request
 export function getPosts(){
   let url = "/posts?limit=100"

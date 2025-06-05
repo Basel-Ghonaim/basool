@@ -1,6 +1,7 @@
 import { showMessage } from "../alert.js"
 import { updateUiOnLogout } from "../event.js"
 
+// Handle Logout [ Remove Token,User / Update UI / Show Message ]
 export function handleLogout() {
   let logoutBtn = document.getElementById("logout-btn")
   logoutBtn.addEventListener("click", () => {

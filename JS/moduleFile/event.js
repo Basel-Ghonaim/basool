@@ -29,10 +29,3 @@ export function updateUiOnLogout() {
   if(loginSuccess) loginSuccess.style.display = "none";
   createBtn.style.display = "none"
 }
-
-
-export function updateUi_AfterCreatePost() {
-  window.location.reload()
-}
-
-

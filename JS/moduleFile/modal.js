@@ -11,13 +11,11 @@ export function closeModal(buttonID, modalID) {
   })
 }
 
-// export function clickWindow() {
-//   window.addEventListener("click", function(e) {
-//     if (e.terget === )
-//   })
-// }
+// Remember [ create function => Window On Click (Close Modal)]
 
 
+
+// Old Code
 
 // // Open modal 
 // export function openModal(modal) {
@@ -34,6 +32,3 @@ export function closeModal(buttonID, modalID) {
 //   })
 // }
 
-// Try Find Cleen Code Best more Than The Code
-
-// [1] create calss .activeModal or show modal

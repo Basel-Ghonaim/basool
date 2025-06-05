@@ -1,4 +1,3 @@
-import { showMessage } from "./alert.js";
 import { createPostRequest } from "./api.js";
 
 export function createPost() {

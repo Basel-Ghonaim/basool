@@ -1,3 +1,4 @@
+// Show Message On Specific Event
 export function showMessage(message, timer = 4000) {
   let myAlert = document.getElementById("alert-message")
   let messageAlert = document.querySelector("#alert-message .text-alert")
