@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BASOOL</title>
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="CSS/master.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Library -->
+</head>
+<body>
+  <main id="main">
+      <!-- Start Header Section -->
+    <section class="header-section">
+      <div class="container">
+        <nav class="nav">
+          <div class="navbar">
+            <!-- logo -->
+            <div class="logo">
+              <h1 class="logo-content">BASOOL</h1>
+            </div>
+            <!-- menu -->
+            <ul class="menu">
+              <li class="list active"><a href="#">Home</a></li>
+              <li class="list"><a href="#">Profile</a></li>
+            </ul>
+          </div>
+          <!-- links -->
+          <div class="login-links">
+            <button id="login" href="#" class="login">Login</button>
+            <button id="register" href="#" class="register">Register</button>
+          </div>
+          <div class="login-success">
+            <div class="profile">
+              <img src="" alt="n" class="img-profile" id="profile-photo"> 
+              <h2 class="username-profile" id="username"></h2>
+            </div>
+            <button class="logout-btn" id="logout-btn"><span>x</span> Log Out</button>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <!-- End Header Section -->
+
+    <!-- Start Post Section -->
+    <section class="posts-section">
+      <div class="container">
+        <div class="posts" id="posts">
+          <!-- post -->
+          <!-- post -->
+          <!-- post -->
+        </div>
+      </div>
+    </section>
+    <!-- End Post Section -->
+  </main>
+  <!--  Start Modal -->
+    <!-- Login Modal -->
+  <div class="focus-modal" id="focus-modal-login">
+    <div class="login-modal" id="login-modal">
+      <div id="exit-login" class="exit">x</div>
+      <h1 class="title-login">Login</h1>
+      <div class="input-login">
+        <input id="email-login" type="text" title="Add Username Or Email" placeholder="Email or Username" value="baselghonaim">
+        <input id="password-login" type="password" title="Add Password" placeholder="passsword" value="basel1234">
+      </div>
+      <div class="btn-login" >
+        <button class="close-btn" id="close-login">close</button>
+        <button class="login-btn">login</button>
+      </div>
+    </div>
+  </div>
+    <!-- Register Modal -->
+    <div class="focus-modal" id="focus-modal-register">
+      <div class="login-modal" id="register-modal">
+        <!--register and [x] => close-->
+        <div id="exit-register" class="exit">x</div>
+        <h1 class="title-login">Register</h1>
+        <!--register input -->
+        <div class="input-login">
+          <!--add profile image-->
+          <div class="choose-image">
+            <p>Choose Image</p>
+            <div class="">
+              <input type="file" id="choose-image-register" title="Choose Profile Photo" accept="image/*">
+            </div>
+          </div>
+          <!--name-->
+          <input id="name-register" type="text" title="Add Name" placeholder="Your Name">
+          <!--username -->
+          <input id="username-register" type="text" title="Add Username" placeholder="Username">
+          <input id="email-register" type="text" title="Add Email" placeholder="Email">
+          <!--password -->
+          <input id="password-register" type="password" title="Add Password" placeholder="passsword">
+        </div>
+        <!--register button -->
+        <div class="btn-login">
+          <button class="close-btn" id="close-register">close</button>
+          <button class="login-btn" id="regBtn">register</button>
+        </div>
+      </div>
+  </div>
+    <!-- Create Post Modal -->
+  <div class="focus-modal" id="focus-modal-create">
+    <div class="login-modal" id="create-modal">
+      <div id="exit-create" class="exit">x</div>
+      <h1 class="title-login">Create Post</h1>
+      <div class="input-login">
+        <input id="title-create" type="text" title="Add Username Or Email" placeholder="Title: ">
+        <textarea name="" id="content-create" placeholder="Add Content Post"></textarea>
+        <div class="choose-image">
+          <p>Choose Image</p>
+          <div class="">
+            <input type="file" name="" id="img-create-post" title="Choose Profile Photo" accept="image/*">
+          </div>
+        </div>
+      </div>
+      <div class="btn-login" >
+        <button class="close-btn" id="close-create">close</button>
+        <button class="login-btn" id="create-btn">create</button>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
+
+  <!-- Create Post Button -->
+  <button class="create" id="create" title="Create Post">+</button>
+  <!-- Alert -->
+  <div class="alert-login" id="alert-message">
+    <span class="close-alert">x</span>
+    <span class="text-alert"></span>
+  </div>   
+
+
+  <!-- JS SRC -->
+  <script src="node_modules/axios/dist/axios.min.js"></script>
+  <script type="module" src="JS/main.js"></script>
+</body>
+</html>

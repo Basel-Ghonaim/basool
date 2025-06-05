@@ -1,0 +1,419 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color: #3B82F6; 
+  --colorLocal: #9ca3af;
+  --trans: all 0.2s ease;
+}
+
+/* Global Style  */
+
+body {
+  background-color: rgb(215 209 209);
+  font-family: "Almarai", sans-serif;
+}
+
+.container {
+  width: 780px;
+}
+
+.hidden { display: none !important; }
+.flex { display: flex !important; }
+.block { display: block !important; }
+
+
+/* Header Section Style */
+
+.header-section {
+  display: flex;
+  justify-content: center;
+}
+
+.header-section .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  margin: 0 10px;
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-section .nav .navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.header-section .nav .navbar .logo { 
+  margin-right: 20px;
+}
+.header-section .nav .navbar .logo h1 {
+  font-weight: 900;
+  color: var(--color);
+}
+
+.header-section .nav .navbar .menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.header-section .nav .navbar .menu .list {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.header-section .nav .navbar .menu .list:hover,
+.header-section .nav .navbar .menu .list.active {
+  opacity: 1;
+}
+
+.header-section .nav .navbar .menu .list:first-child {
+  margin-right: 15px;
+}
+
+.header-section .nav .navbar .menu .list a {
+  color: #525252;
+  text-decoration: none;
+}
+
+.header-section .nav .login-links {
+  display: flex;
+  align-items: center;
+}
+
+.header-section .nav .login-links button {
+  color: var(--color);
+  background-color: transparent;
+  border: 1px solid var(--color);
+  padding: 8px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.header-section .nav .login-links button:last-child {
+  margin-left: 10px;
+}
+
+.header-section .nav .login-links button:hover {
+  color: #fff;
+  background-color: var(--color);
+}
+.header-section .nav .login-success {
+  display: none;
+  align-items: center;
+}
+.header-section .nav .login-success .profile{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.header-section .nav .login-success .profile .img-profile {
+  width: 40px;
+  height: 40px;
+  border: solid 1px #bdb4b4;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header-section .nav .login-success .profile .username-profile{
+  font-size: 20px;
+}
+
+.header-section .nav .login-success .logout-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
+  color: red;
+  border-color: red;
+  padding-left: 30px;
+}
+
+.header-section .nav .login-success .logout-btn:hover {
+  color: #fff;
+  background-color: red;
+}
+
+.header-section .nav .login-success .logout-btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 8px;
+  border-right: solid 1px red;
+}
+
+.header-section .nav .login-success .logout-btn:hover span {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Posts Styles */
+
+.posts-section {
+  display: flex;
+  justify-content: center;
+}
+
+.posts-section .posts .post {
+  background-color: #fff;
+  margin: 0 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 3rem;
+}
+
+.posts-section .posts .post .header-post {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #00800017;
+  border-bottom: solid 1px var(--color);
+  border-radius: 5px 5px 0 0;
+
+}
+.posts-section .posts .post .header-post .user-img {
+  width: 40px;
+  height: 40px;
+  border: solid 1px #bdb4b4;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.posts-section .posts .post .header-post .user-name {
+  font-size: 18px;
+}
+
+.posts-section .posts .post .body-post {
+  padding: 15px;
+  border-radius: 0 0 5px 5px;
+
+}
+
+.posts-section .posts .post .body-post .img-post img {
+  width: 100%;
+}
+.posts-section .posts .post .body-post .img-post p {
+  color: var(--colorLocal);
+}
+
+.posts-section .posts .post .body-post .content-post {
+  padding: 15px 0;
+  margin-bottom: 15px;
+  border-bottom: solid 1px var(--colorLocal);
+}
+
+.posts-section .posts .post .body-post .content-post .title-post {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+  /*
+Start
+=> [Modal Styles] <=
+  */
+
+  #focus-modal-login ,
+#focus-modal-register,
+#focus-modal-create {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #00000099;
+  width: 100%;
+  display: none;
+}
+
+#focus-modal-login .login-modal,
+#focus-modal-register .login-modal,
+#focus-modal-create .login-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.login-modal .exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: lighter;
+  color: var(--colorLocal);
+  cursor: pointer;
+}
+
+.login-modal .title-login {
+  width: 100%;
+  color: var(--color);
+  font-weight: 700;
+}
+
+.login-modal .input-login {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--colorLocal);
+  border-top: 1px solid var(--colorLocal);
+  margin: 18px 0;
+}
+
+.login-modal .input-login > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.login-modal .input-login .choose-image p {
+  padding-bottom: 10px;
+}
+
+.login-modal .input-login input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: solid 1px var(--colorLocal);
+}
+
+.login-modal .input-login input:focus {
+  outline: none;
+  border: solid var(--color) 1px;
+}
+.login-modal .input-login input:focus::placeholder {
+  color: var(--color);
+}
+
+.login-modal .btn-login {
+  display: flex;
+  justify-content: flex-end;
+  border-top: solid 1px var(--colorLocal);
+  padding-top: 20px;
+  margin-top: 15px;
+}
+
+.login-modal .btn-login button {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  transition: var(--trans);
+}
+
+.login-modal .btn-login .login-btn {
+  margin-left: 10px;
+  background-color: var(--color);
+  border: solid 1px var(--color);
+}
+
+.login-modal .btn-login .close-btn {
+  color: var(--color);
+  background-color: transparent;
+}
+
+.login-modal .btn-login .login-btn:hover {
+  color: var(--color);
+  background-color: #fff;
+}
+
+.login-modal .btn-login .close-btn:hover {
+  color: #fff;
+  background-color: var(--colorLocal);
+}
+
+#focus-modal-create .login-modal #content-create {
+  width: 100%;
+  height: 70px;
+  border-radius: 5px;
+  resize: none;
+  padding: 7px;
+}
+#focus-modal-create .login-modal #content-create:focus {
+  border-color: var(--color);
+  outline: none;
+}
+
+/* On Show Modal */
+.show-modal {
+  display: block !important;
+}
+
+.show-modal .login-modal {
+  display: block !important;
+}
+
+/* Alert Styles */
+
+
+.alert-login {
+  /* visibility: hidden; */
+  padding: 10px;
+  position: relative;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  color: #fff;
+  background-color: var(--color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.alert-login .close-alert {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+.alert-login .close-alert:hover {
+  color: #000;
+}
+
+.alert-login .text-alert {
+  position: relative;
+  margin-left: 25px;
+  font-size: 25px
+}
+
+/* Button Create Post Style */
+
+.create {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--color);
+  background-color: transparent;
+  border: solid 2px var(--color);
+  border-radius: 50%;
+}
+
+.create:hover {
+  color: #fff;
+  background-color: var(--color);
+  
+}
